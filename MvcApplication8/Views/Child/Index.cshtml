@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MvcApplication8.Models.Child>
+﻿@model IEnumerable<SchoolDomains.Child>
 
 @{
     ViewBag.Title = "Работа с обучающимися";
@@ -89,7 +89,7 @@
             @Html.DisplayFor(modelItem => item.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SurName)
+            @Html.DisplayFor(modelItem => item.PatranomicName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.BDate)
@@ -149,9 +149,9 @@
             @Html.DisplayFor(modelItem => item.TypeOfStudy)
         </td>*@
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.ChildId })
-            @Html.ActionLink("Детали", "Details", new { id=item.ChildId })
-            @Html.ActionLink("Удалить", "Delete", new { id=item.ChildId })
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id })
+            @Html.ActionLink("Детали", "Details", new { id=item.Id })
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

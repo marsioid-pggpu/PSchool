@@ -5,14 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcApplication8.Models;
+using SchoolPortal.Models;
 using SchoolDomains;
 
-namespace MvcApplication8.Controllers
+namespace SchoolPortal.Controllers
 {
     public class ChildController : Controller
     {
-        private MvcApplication8Context db = new MvcApplication8Context();
+        private SchoolContext db = new SchoolContext();
 
         //
         // GET: /Child/Add
@@ -24,6 +24,20 @@ namespace MvcApplication8.Controllers
 
             SelectList nationalities = new SelectList(db.Nationalities, "Id", "Name");
             ViewBag.Nationalities = nationalities;
+            SelectList var_class = new SelectList(db.Classes, "ClassId", "Parallel");
+            ViewBag.Classes = var_class;
+            SelectList studyform = new SelectList(db.StudyFroms, "Id", "Name");
+            ViewBag.StudyFroms = studyform;
+            SelectList studytype = new SelectList(db.StudyTypes, "Id", "Name");
+            ViewBag.StudyTypes = studytype;
+
+
+            //var nationalities = db.Nationalities.ToList();
+            //ViewBag.Nationalities = nationalities.Select(x => new SelectListItem
+            //{
+            //    Value = x.Id.ToString(),
+            //    Text = x.Name
+            //});
             
             
             return View();
@@ -46,55 +60,53 @@ namespace MvcApplication8.Controllers
 
             SelectList nationalities = new SelectList(db.Nationalities, "Id", "Name");
             ViewBag.Nationalities = nationalities;
+            SelectList var_class = new SelectList(db.Classes, "ClassId", "Parallel");
+            ViewBag.Classes = var_class;
+            SelectList studyform = new SelectList(db.StudyFroms, "Id", "Name");
+            ViewBag.StudyFroms = studyform;
+            SelectList studytype = new SelectList(db.StudyTypes, "Id", "Name");
+            ViewBag.StudyTypes = studytype;
 
+
+
+            //var nationalities = db.Nationalities.ToList();
+            //ViewBag.Nationalities = nationalities.Select(x => new SelectListItem
+            //{
+            //    Value = x.Id.ToString(),
+            //    Text = x.Name
+            //});
 
             return View(child);
         }
 
         //
-        // GET: /Child/SearchChild
+        // GET: /Child/Search
 
-        public ActionResult SearchChild()
+        //[Authorize (Roles="admins,users")]
+        public ActionResult Search()
         {
             return View();
         }
 
         //
-        // POST: /Child/SearchChild
+        // POST: /Child/Search
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SearchChild(Child child)
+        public ActionResult Search(Child child)
         {
             if (ModelState.IsValid)
             {
-    
-                //db.Children.Add(child);
-                //db.SaveChanges();
-                //return RedirectToAction("Index");
 
-            }
+            
+                
 
-            return View(child);
+
+                return RedirectToAction("Edit", "Child");
+            }            
+
+            return View();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -126,90 +138,90 @@ namespace MvcApplication8.Controllers
             return View(child);
         }
 
-        //
-        // GET: /Child/Create
+        ////
+        //// GET: /Child/Create
 
-        public ActionResult Create()
-        {
-            return View();
-        }
+        //public ActionResult Create()
+        //{
+        //    return View();
+        //}
 
-        //
-        // POST: /Child/Create
+        ////
+        //// POST: /Child/Create
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Child child)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Children.Add(child);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create(Child child)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Children.Add(child);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(child);
-        }
+        //    return View(child);
+        //}
 
-        //
-        // GET: /Child/Edit/5
+        ////
+        //// GET: /Child/Edit/5
 
-        public ActionResult Edit(int id = 0)
-        {
-            Child child = db.Children.Find(id);
-            if (child == null)
-            {
-                return HttpNotFound();
-            }
-            return View(child);
-        }
+        //public ActionResult Edit(int id = 0)
+        //{
+        //    Child child = db.Children.Find(id);
+        //    if (child == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(child);
+        //}
 
-        //
-        // POST: /Child/Edit/5
+        ////
+        //// POST: /Child/Edit/5
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Child child)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(child).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(child);
-        }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit(Child child)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Entry(child).State = EntityState.Modified;
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+        //    return View(child);
+        //}
 
-        //
-        // GET: /Child/Delete/5
+        ////
+        //// GET: /Child/Delete/5
 
-        public ActionResult Delete(int id = 0)
-        {
-            Child child = db.Children.Find(id);
-            if (child == null)
-            {
-                return HttpNotFound();
-            }
-            return View(child);
-        }
+        //public ActionResult Delete(int id = 0)
+        //{
+        //    Child child = db.Children.Find(id);
+        //    if (child == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    return View(child);
+        //}
 
-        //
-        // POST: /Child/Delete/5
+        ////
+        //// POST: /Child/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Child child = db.Children.Find(id);
-            db.Children.Remove(child);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        //[HttpPost, ActionName("Delete")]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    Child child = db.Children.Find(id);
+        //    db.Children.Remove(child);
+        //    db.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
+        //protected override void Dispose(bool disposing)
+        //{
+        //    db.Dispose();
+        //    base.Dispose(disposing);
+        //}
     }
 }

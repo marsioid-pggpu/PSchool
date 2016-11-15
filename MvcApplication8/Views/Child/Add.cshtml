@@ -173,13 +173,13 @@
             @Html.ValidationMessageFor(model => model.SvOther)
         </div>
 
-@*        <div class="editor-label">
+        <div class="editor-label">
             Класс
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Class.ClassId)
+            @Html.DropDownListFor(model => model.Class.ClassId, ViewBag.Classes as SelectList)
             @Html.ValidationMessageFor(model => model.Class.ClassId)
-        </div>*@
+        </div>
 
         <div class="editor-label">
             Национальность
@@ -190,10 +190,18 @@
         </div>
 
 @*        <div class="editor-label">
+            Национальность
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("nationalities", (IEnumerable<SelectListItem>)ViewBag.Nationalities)
+            @Html.ValidationMessageFor()
+        </div>*@
+
+        <div class="editor-label">
             Форма обучения
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.StudyFrom.Id)
+            @Html.DropDownListFor(model => model.StudyFrom.Id, ViewBag.StudyFroms as SelectList)
             @Html.ValidationMessageFor(model => model.StudyFrom.Id)
         </div>
 
@@ -201,9 +209,9 @@
             Тип обучения
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.StudyType.Id)
+            @Html.DropDownListFor(model => model.StudyType.Id, ViewBag.StudyTypes as SelectList)
             @Html.ValidationMessageFor(model => model.StudyType.Id)
-        </div>*@
+        </div>
 
         <p>
             <input type="submit" value="Create" />

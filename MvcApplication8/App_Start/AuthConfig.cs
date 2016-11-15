@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Web.WebPages.OAuth;
-using MvcApplication8.Models;
+using SchoolPortal.Models;
 
-namespace MvcApplication8
+namespace SchoolPortal
 {
     public static class AuthConfig
     {

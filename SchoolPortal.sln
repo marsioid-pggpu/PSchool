@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication8", "MvcApplication8\MvcApplication8.csproj", "{D341CC56-5095-4142-ADC0-654759BAA9F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolPortal", "MvcApplication8\SchoolPortal.csproj", "{D341CC56-5095-4142-ADC0-654759BAA9F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

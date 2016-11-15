@@ -8,10 +8,10 @@ using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
-using MvcApplication8.Filters;
-using MvcApplication8.Models;
+using SchoolPortal.Filters;
+using SchoolPortal.Models;
 
-namespace MvcApplication8.Controllers
+namespace SchoolPortal.Controllers
 {
     [Authorize]
     [InitializeSimpleMembership]

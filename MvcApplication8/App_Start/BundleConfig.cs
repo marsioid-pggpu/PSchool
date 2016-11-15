@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace MvcApplication8
+namespace SchoolPortal
 {
     public class BundleConfig
     {

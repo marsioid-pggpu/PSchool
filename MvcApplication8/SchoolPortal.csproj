@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MvcApplication8</RootNamespace>
+    <RootNamespace>SchoolPortal</RootNamespace>
     <AssemblyName>MvcApplication8</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
@@ -188,15 +188,18 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\ChildController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ReportController.cs" />
     <Compile Include="Controllers\SchoolController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611151145227_1.cs" />
+    <Compile Include="Migrations\201611151145227_1.Designer.cs">
+      <DependentUpon>201611151145227_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\MvcApplication8Context.cs" />
-    <Compile Include="Models\ReportContext.cs" />
+    <Compile Include="Models\SchoolContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -272,7 +275,9 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -325,7 +330,7 @@
     <Content Include="Views\Home\UserIndex.cshtml" />
     <Content Include="Views\Home\Query.cshtml" />
     <Content Include="Views\Child\2AddChild.cshtml" />
-    <Content Include="Views\School\SearchChild.cshtml" />
+    <Content Include="Views\Child\Search.cshtml" />
     <Content Include="Views\Report\ReportChildSchool.cshtml" />
     <Content Include="Views\Report\Index.cshtml" />
     <Content Include="Views\Report\Details.cshtml" />
@@ -340,6 +345,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611151145227_1.resx">
+      <DependentUpon>201611151145227_1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

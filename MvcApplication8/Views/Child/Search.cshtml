@@ -1,4 +1,4 @@
-﻿@model MvcApplication8.Models.Child
+﻿@model SchoolDomains.Child
 @{
     ViewBag.Title = "Поиск учеников и редактирование данных";
 }
@@ -30,8 +30,8 @@
             Отчество
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.SurName)
-            @Html.ValidationMessageFor(model => model.SurName)
+            @Html.EditorFor(model => model.PatranomicName)
+            @Html.ValidationMessageFor(model => model.PatranomicName)
         </div>
 
         <div class="editor-label">

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcApplication8.Models;
+using SchoolPortal.Models;
 
-namespace MvcApplication8.Controllers
+namespace SchoolPortal.Controllers
 {
     public class HomeController : Controller
     {
@@ -49,7 +49,7 @@ namespace MvcApplication8.Controllers
         public ActionResult Query()
         {
 
-        using(MvcApplication8Context db = new MvcApplication8Context()){
+        using(SchoolContext db = new SchoolContext()){
             ViewBag.fName = db.Children.Find(1).FirstName;
             ViewBag.lName = db.Children.Find(1).LastName;
             ViewBag.sName = db.Children.Find(1).PatranomicName;

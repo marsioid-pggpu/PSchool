@@ -5,14 +5,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcApplication8.Models;
+using SchoolPortal.Models;
 using SchoolDomains;
 
-namespace MvcApplication8.Controllers
+namespace SchoolPortal.Controllers
 {
     public class SchoolController : Controller
     {
-        private MvcApplication8Context db = new MvcApplication8Context();
+        private SchoolContext db = new SchoolContext();
 
         //
         // GET: /School/
