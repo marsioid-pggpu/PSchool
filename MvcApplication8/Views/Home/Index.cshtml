@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+
+            </hgroup>
+
+        </div>
+    </section>
+}
+
+<div id="indexNonAuth">
+<h2>Добро пожаловать на Школьный портал города Перми</h2>
+<h4>Чтобы начать работу с порталом необходимо авторизироваться</h4>
+<h3>@Html.ActionLink("Войти", "Login", "Account")</h3>
+</div>
+
+
+

@@ -1,0 +1,59 @@
+﻿@model MvcApplication8.Models.Child
+@{
+    ViewBag.Title = "Поиск учеников и редактирование данных";
+}
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Поиск учеников и редактирование данных</legend>
+
+        <div class="editor-label">
+            Фамилия
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            Имя
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            Отчество
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SurName)
+            @Html.ValidationMessageFor(model => model.SurName)
+        </div>
+
+        <div class="editor-label">
+            Дата рождения
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BDate)
+            @Html.ValidationMessageFor(model => model.BDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Поиск" />
+        </p>
+
+
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

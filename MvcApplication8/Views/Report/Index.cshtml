@@ -1,0 +1,147 @@
+﻿@model IEnumerable<SchoolDomains.Child>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PatranomicName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Index)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Street)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.House)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.House2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sertifact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvSer1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvSer2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvOther)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatranomicName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Index)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sertifact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvSer1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvSer2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvOther)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

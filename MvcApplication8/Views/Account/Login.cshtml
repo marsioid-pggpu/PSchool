@@ -1,0 +1,50 @@
+﻿@model MvcApplication8.Models.LoginModel
+
+@{
+    ViewBag.Title = "Вход";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title</h1>
+</hgroup>
+
+<section id="loginForm">
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Log in Form</legend>
+        <ol>
+            <li>
+                Имя пользователя<br />
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+            </li>
+            <li>
+                Пароль<br />
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+            </li>
+            <li>
+                @Html.CheckBoxFor(m => m.RememberMe)
+                Забыли пароль?
+                @*@Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })*@
+            </li>
+        </ol>
+        <input type="submit" value="Войти" />
+    </fieldset>
+    <p>
+        @Html.ActionLink("Зарегистрируйтесь", "Register"), если у вас еще нет аккаунта.
+    </p>
+}
+</section>
+
+@*<section class="social" id="socialLoginForm">
+    <h2>Use another service to log in.</h2>
+    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

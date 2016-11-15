@@ -1,0 +1,172 @@
+﻿@model MvcApplication8.Models.Child
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Child</legend>
+
+    <div class="display-label">
+         Фамилия: 
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SurName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SurName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sex)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sex)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Index)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Index)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Flat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Flat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvSer1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvSer1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvSer2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvSer2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvOther)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvOther)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FormOfStudy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FormOfStudy)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TypeOfStudy)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TypeOfStudy)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Вернутся назад", "Index")
+    </p>
+}

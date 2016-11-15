@@ -1,0 +1,155 @@
+﻿@model SchoolDomains.Child
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Child</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PatranomicName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PatranomicName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Index)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Index)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Flat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Flat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sertifact)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sertifact)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CC4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CC4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvSer1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvSer1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvSer2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvSer2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvNum)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvNum)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SvOther)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SvOther)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Главная страница";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+            </hgroup>
+
+        </div>
+    </section>
+}
+
+<section class="home-user-menu">
+    <div class="child">
+        <header>
+            <h2>Работа с учениками</h2>
+        </header>
+            <p>
+                @Html.ActionLink("Добавить ученика", "Add", "Child")
+                @Html.ActionLink("Поиск ученика и редактирование данных", "Search", "Child")
+                @Html.ActionLink("Загрузить данные из Excel документа", "Import", "Child")
+            </p>
+    </div>
+    <div class="institutions">
+        <header>
+            <h2>Работа с образовательными учереждениями</h2>
+        </header>
+            <p>
+                @Html.ActionLink("Слияние двух образовательных учереждений", "Marger", "School")
+                @Html.ActionLink("Перевод класс из одного ОУ в другое", "TransferClass", "School")
+            </p>
+    </div>
+    <div class="report">
+        <header>
+            <h2>Отчеты</h2>
+        </header>
+            <p>
+                @Html.ActionLink("Количество детей по школам", "ChildSchool", "Report")
+                @Html.ActionLink("Количество детей по параллелям", "ChildParallel", "Report")
+                @Html.ActionLink("Количество детей по классам", "ChildClass", "Report")<br />
+                @Html.ActionLink("По определенным классам", "CertainClass", "Report")
+                @Html.ActionLink("Классы по школам", "ClassSchool", "Report")
+                @Html.ActionLink("По форме обучения", "FormStudy", "Report")
+                @Html.ActionLink("С временной регистрацией", "TempRegistration", "Report")
+            </p>
+    </div>
+<//section>

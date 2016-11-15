@@ -1,0 +1,254 @@
+﻿@model MvcApplication8.Models.Child
+
+@{
+    ViewBag.Title = "Добавление ученика";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Добавление ученика</legend>
+
+
+
+
+
+
+        <div class="left-add-child">
+        
+
+
+
+
+        <div class="editor-label">
+            Фамилия
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            Имя
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            Отчество
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SurName)
+            @Html.ValidationMessageFor(model => model.SurName)
+        </div>
+
+        <div class="editor-label">
+            Дата рождения
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BDate)
+            @Html.ValidationMessageFor(model => model.BDate)
+        </div>
+
+        <div class="editor-label">
+            Пол
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Sex)
+            @Html.ValidationMessageFor(model => model.Sex)
+        </div>
+
+
+
+
+
+        </div>
+        <div class="right-add-child">
+
+
+
+
+
+
+
+        <div class="editor-label">
+            Индекс
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Index)
+            @Html.ValidationMessageFor(model => model.Index)
+        </div>
+
+        <div class="editor-label">
+            Город
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.City)
+            @Html.ValidationMessageFor(model => model.City)
+        </div>
+
+        <div class="editor-label">
+            Улица
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Street)
+            @Html.ValidationMessageFor(model => model.Street)
+        </div>
+
+        <div class="editor-label">
+            Дом
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.House)
+            @Html.ValidationMessageFor(model => model.House)
+        </div>
+
+        <div class="editor-label">
+            Корпус
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.House2)
+            @Html.ValidationMessageFor(model => model.House2)
+        </div>
+
+        <div class="editor-label">
+            Квартира
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Flat)
+            @Html.ValidationMessageFor(model => model.Flat)
+        </div>
+
+        <div class="editor-label">
+            Телефон
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CC1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CC1)
+            @Html.ValidationMessageFor(model => model.CC1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CC2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CC2)
+            @Html.ValidationMessageFor(model => model.CC2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CC3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CC3)
+            @Html.ValidationMessageFor(model => model.CC3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CC4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CC4)
+            @Html.ValidationMessageFor(model => model.CC4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SvSer1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SvSer1)
+            @Html.ValidationMessageFor(model => model.SvSer1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SvSer2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SvSer2)
+            @Html.ValidationMessageFor(model => model.SvSer2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SvNum)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SvNum)
+            @Html.ValidationMessageFor(model => model.SvNum)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SvOther)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SvOther)
+            @Html.ValidationMessageFor(model => model.SvOther)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FormOfStudy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FormOfStudy)
+            @Html.ValidationMessageFor(model => model.FormOfStudy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TypeOfStudy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TypeOfStudy)
+            @Html.ValidationMessageFor(model => model.TypeOfStudy)
+        </div>
+
+        <p>
+            <input type="submit" value="Добавить" />
+        </p>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Вернутся назад", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

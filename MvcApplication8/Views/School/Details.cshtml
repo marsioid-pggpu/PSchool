@@ -1,0 +1,64 @@
+﻿@model MvcApplication8.Models.School
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>School</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Index)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Index)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Street)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Street)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.House2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.House2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Boss)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Boss)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SchoolId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

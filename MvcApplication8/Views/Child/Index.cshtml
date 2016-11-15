@@ -1,0 +1,163 @@
+﻿@model IEnumerable<MvcApplication8.Models.Child>
+
+@{
+    ViewBag.Title = "Работа с обучающимися";
+}
+
+<h2>Работа с обучающимися</h2>
+
+<p>
+    @Html.ActionLink("Создать обучающегося", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Фамилия
+        </th>
+        <th>
+            Имя
+        </th>
+        <th>
+            Отчество
+        </th>
+        <th>
+            Дата рождения
+        </th>
+        <th>
+            Пол
+        </th>
+        <th>
+            Индекс
+        </th>
+        <th>
+            Город
+        </th>
+        <th>
+            Улица
+        </th>
+        <th>
+            Дом
+        </th>
+        <th>
+            Корпус
+        </th>
+        <th>
+            Квартира
+        </th>
+        <th>
+            Телефон
+        </th>
+@*        <th>
+            @Html.DisplayNameFor(model => model.CC1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CC4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvSer1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvSer2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SvOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormOfStudy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOfStudy)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Index)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Street)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.House2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+@*        <td>
+            @Html.DisplayFor(modelItem => item.CC1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CC4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvSer1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvSer2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SvOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FormOfStudy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeOfStudy)
+        </td>*@
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.ChildId })
+            @Html.ActionLink("Детали", "Details", new { id=item.ChildId })
+            @Html.ActionLink("Удалить", "Delete", new { id=item.ChildId })
+        </td>
+    </tr>
+}
+
+
+</table>
+    <p>
+        @Html.ActionLink("Вернутся назад", "../")
+    </p>
