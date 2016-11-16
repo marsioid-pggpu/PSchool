@@ -40,7 +40,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SchoolDomains">
+    <Reference Include="SchoolDomains, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ConsoleApplication4\SchoolDomains\bin\Debug\SchoolDomains.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -193,13 +194,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611151145227_1.cs" />
-    <Compile Include="Migrations\201611151145227_1.Designer.cs">
-      <DependentUpon>201611151145227_1.cs</DependentUpon>
+    <Compile Include="Migrations\201611160634266_1.cs" />
+    <Compile Include="Migrations\201611160634266_1.Designer.cs">
+      <DependentUpon>201611160634266_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\SchoolContext.cs" />
+    <Compile Include="Models\SchoolView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -311,7 +313,6 @@
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\AdminIndex.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -339,6 +340,14 @@
     <Content Include="Views\Report\Delete.cshtml" />
     <Content Include="Views\Child\Add.cshtml" />
     <Content Include="Views\Admin\AddStudyType.cshtml" />
+    <Content Include="Views\Admin\AddStudyForm.cshtml" />
+    <Content Include="Views\Admin\AddSchoolType.cshtml" />
+    <Content Include="Views\Admin\AddClassType.cshtml" />
+    <Content Include="Views\Admin\AddNationality.cshtml" />
+    <Content Include="Views\Admin\AddLocality.cshtml" />
+    <Content Include="Views\Home\AdminIndex.cshtml" />
+    <Content Include="Views\Admin\AddSchool.cshtml" />
+    <Content Include="Views\Admin\FindSchool.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -347,8 +356,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611151145227_1.resx">
-      <DependentUpon>201611151145227_1.cs</DependentUpon>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611160634266_1.resx">
+      <DependentUpon>201611160634266_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

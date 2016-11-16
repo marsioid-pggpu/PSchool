@@ -65,14 +65,14 @@ namespace SchoolPortal.Migrations
                 "dbo.Classes",
                 c => new
                     {
-                        ClassId = c.Int(nullable: false, identity: true),
+                        Id = c.Int(nullable: false, identity: true),
                         Parallel = c.Int(nullable: false),
                         Litera = c.String(),
                         Note = c.String(),
                         ClassType_Id = c.Int(nullable: false),
                         School_Id = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ClassId)
+                .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.ClassTypes", t => t.ClassType_Id, cascadeDelete: true)
                 .ForeignKey("dbo.Schools", t => t.School_Id, cascadeDelete: true)
                 .Index(t => t.ClassType_Id)
@@ -113,19 +113,19 @@ namespace SchoolPortal.Migrations
                         SvSer2 = c.String(),
                         SvNum = c.String(),
                         SvOther = c.String(),
-                        Class_ClassId = c.Int(nullable: false),
+                        Class_Id = c.Int(nullable: false),
                         Nationality_Id = c.Int(nullable: false),
-                        StudyFrom_Id = c.Int(nullable: false),
+                        StudyForm_Id = c.Int(nullable: false),
                         StudyType_Id = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Classes", t => t.Class_ClassId, cascadeDelete: true)
+                .ForeignKey("dbo.Classes", t => t.Class_Id, cascadeDelete: true)
                 .ForeignKey("dbo.Nationalities", t => t.Nationality_Id, cascadeDelete: true)
-                .ForeignKey("dbo.StudyFroms", t => t.StudyFrom_Id, cascadeDelete: true)
+                .ForeignKey("dbo.StudyForms", t => t.StudyForm_Id, cascadeDelete: true)
                 .ForeignKey("dbo.StudyTypes", t => t.StudyType_Id, cascadeDelete: true)
-                .Index(t => t.Class_ClassId)
+                .Index(t => t.Class_Id)
                 .Index(t => t.Nationality_Id)
-                .Index(t => t.StudyFrom_Id)
+                .Index(t => t.StudyForm_Id)
                 .Index(t => t.StudyType_Id);
             
             CreateTable(
@@ -138,7 +138,7 @@ namespace SchoolPortal.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.StudyFroms",
+                "dbo.StudyForms",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -176,15 +176,15 @@ namespace SchoolPortal.Migrations
                         DateAdd = c.DateTime(nullable: false),
                         DateEdit = c.DateTime(nullable: false),
                         Child_Id = c.Int(nullable: false),
-                        Class_ClassId = c.Int(),
+                        Class_Id = c.Int(),
                         EmploymentType_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Children", t => t.Child_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Classes", t => t.Class_ClassId)
+                .ForeignKey("dbo.Classes", t => t.Class_Id)
                 .ForeignKey("dbo.EmploymentTypes", t => t.EmploymentType_Id)
                 .Index(t => t.Child_Id)
-                .Index(t => t.Class_ClassId)
+                .Index(t => t.Class_Id)
                 .Index(t => t.EmploymentType_Id);
             
             CreateTable(
@@ -247,13 +247,13 @@ namespace SchoolPortal.Migrations
             DropIndex("dbo.Histories", new[] { "School_Id" });
             DropIndex("dbo.Histories", new[] { "Child_Id" });
             DropIndex("dbo.Employments", new[] { "EmploymentType_Id" });
-            DropIndex("dbo.Employments", new[] { "Class_ClassId" });
+            DropIndex("dbo.Employments", new[] { "Class_Id" });
             DropIndex("dbo.Employments", new[] { "Child_Id" });
             DropIndex("dbo.Registrations", new[] { "Id" });
             DropIndex("dbo.Children", new[] { "StudyType_Id" });
-            DropIndex("dbo.Children", new[] { "StudyFrom_Id" });
+            DropIndex("dbo.Children", new[] { "StudyForm_Id" });
             DropIndex("dbo.Children", new[] { "Nationality_Id" });
-            DropIndex("dbo.Children", new[] { "Class_ClassId" });
+            DropIndex("dbo.Children", new[] { "Class_Id" });
             DropIndex("dbo.Classes", new[] { "School_Id" });
             DropIndex("dbo.Classes", new[] { "ClassType_Id" });
             DropIndex("dbo.Schools", new[] { "User_Id" });
@@ -263,13 +263,13 @@ namespace SchoolPortal.Migrations
             DropForeignKey("dbo.Histories", "School_Id", "dbo.Schools");
             DropForeignKey("dbo.Histories", "Child_Id", "dbo.Children");
             DropForeignKey("dbo.Employments", "EmploymentType_Id", "dbo.EmploymentTypes");
-            DropForeignKey("dbo.Employments", "Class_ClassId", "dbo.Classes");
+            DropForeignKey("dbo.Employments", "Class_Id", "dbo.Classes");
             DropForeignKey("dbo.Employments", "Child_Id", "dbo.Children");
             DropForeignKey("dbo.Registrations", "Id", "dbo.Children");
             DropForeignKey("dbo.Children", "StudyType_Id", "dbo.StudyTypes");
-            DropForeignKey("dbo.Children", "StudyFrom_Id", "dbo.StudyFroms");
+            DropForeignKey("dbo.Children", "StudyForm_Id", "dbo.StudyForms");
             DropForeignKey("dbo.Children", "Nationality_Id", "dbo.Nationalities");
-            DropForeignKey("dbo.Children", "Class_ClassId", "dbo.Classes");
+            DropForeignKey("dbo.Children", "Class_Id", "dbo.Classes");
             DropForeignKey("dbo.Classes", "School_Id", "dbo.Schools");
             DropForeignKey("dbo.Classes", "ClassType_Id", "dbo.ClassTypes");
             DropForeignKey("dbo.Schools", "User_Id", "dbo.Users");
@@ -281,7 +281,7 @@ namespace SchoolPortal.Migrations
             DropTable("dbo.Employments");
             DropTable("dbo.Registrations");
             DropTable("dbo.StudyTypes");
-            DropTable("dbo.StudyFroms");
+            DropTable("dbo.StudyForms");
             DropTable("dbo.Nationalities");
             DropTable("dbo.Children");
             DropTable("dbo.ClassTypes");

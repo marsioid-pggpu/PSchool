@@ -1,17 +1,17 @@
 ﻿@model SchoolDomains.Child
 
 @{
-    ViewBag.Title = "Add";
+    ViewBag.Title = "Добавление обучающегося";
 }
 
-<h2>Add</h2>
+<h2>Добавление обучающегося</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Child</legend>
+        <legend>Добавление обучающегося</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.FirstName)
@@ -177,8 +177,8 @@
             Класс
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.Class.ClassId, ViewBag.Classes as SelectList)
-            @Html.ValidationMessageFor(model => model.Class.ClassId)
+            @Html.DropDownListFor(model => model.Class.Id, ViewBag.Classes as SelectList)
+            @Html.ValidationMessageFor(model => model.Class.Id)
         </div>
 
         <div class="editor-label">
@@ -189,20 +189,20 @@
             @Html.ValidationMessageFor(model => model.Nationality.Id)
         </div>
 
-@*        <div class="editor-label">
-            Национальность
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("nationalities", (IEnumerable<SelectListItem>)ViewBag.Nationalities)
-            @Html.ValidationMessageFor()
-        </div>*@
+                    @*        <div class="editor-label">
+                                Национальность
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("nationalities", (IEnumerable<SelectListItem>)ViewBag.Nationalities)
+                                @Html.ValidationMessageFor()
+                            </div>*@
 
         <div class="editor-label">
             Форма обучения
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(model => model.StudyFrom.Id, ViewBag.StudyFroms as SelectList)
-            @Html.ValidationMessageFor(model => model.StudyFrom.Id)
+            @Html.DropDownListFor(model => model.StudyForm.Id, ViewBag.StudyFroms as SelectList)
+            @Html.ValidationMessageFor(model => model.StudyForm.Id)
         </div>
 
         <div class="editor-label">

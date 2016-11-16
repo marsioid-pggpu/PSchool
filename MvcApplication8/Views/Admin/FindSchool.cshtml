@@ -1,32 +1,35 @@
-﻿@model SchoolDomains.StudyType
+﻿@model SchoolDomains.School
 
 @{
-    ViewBag.Title = "Добавление типа обучения";
+    ViewBag.Title = "Добавление школы";
 }
+
+<h2>Добавление школы</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Тип обучения</legend>
+        <legend>Поиск школы</legend>
 
         <div class="editor-label">
-            Добавление типа обучения:
+            Название:
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Name)
             @Html.ValidationMessageFor(model => model.Name)
         </div>
 
+
         <p>
-            <input type="submit" value="Добавить" />
+            <input type="submit" value="Искать" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Назад", "AdminIndex", "Home")
+    @Html.ActionLink("Back to List", "Index")
 </div>
 
 @section Scripts {

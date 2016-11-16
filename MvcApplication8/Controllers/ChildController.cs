@@ -24,13 +24,13 @@ namespace SchoolPortal.Controllers
 
             SelectList nationalities = new SelectList(db.Nationalities, "Id", "Name");
             ViewBag.Nationalities = nationalities;
-            SelectList var_class = new SelectList(db.Classes, "ClassId", "Parallel");
+            SelectList var_class = new SelectList(db.Classes, "Id", "Parallel");
             ViewBag.Classes = var_class;
-            SelectList studyform = new SelectList(db.StudyFroms, "Id", "Name");
+            SelectList studyform = new SelectList(db.StudyForms, "Id", "Name");
             ViewBag.StudyFroms = studyform;
             SelectList studytype = new SelectList(db.StudyTypes, "Id", "Name");
             ViewBag.StudyTypes = studytype;
-
+            
 
             //var nationalities = db.Nationalities.ToList();
             //ViewBag.Nationalities = nationalities.Select(x => new SelectListItem
@@ -57,17 +57,15 @@ namespace SchoolPortal.Controllers
                 return RedirectToAction("Index", "Home");
             }
 
-
             SelectList nationalities = new SelectList(db.Nationalities, "Id", "Name");
             ViewBag.Nationalities = nationalities;
-            SelectList var_class = new SelectList(db.Classes, "ClassId", "Parallel");
+            SelectList var_class = new SelectList(db.Classes, "Id", "Parallel");
             ViewBag.Classes = var_class;
-            SelectList studyform = new SelectList(db.StudyFroms, "Id", "Name");
+            SelectList studyform = new SelectList(db.StudyForms, "Id", "Name");
             ViewBag.StudyFroms = studyform;
             SelectList studytype = new SelectList(db.StudyTypes, "Id", "Name");
             ViewBag.StudyTypes = studytype;
-
-
+            
 
             //var nationalities = db.Nationalities.ToList();
             //ViewBag.Nationalities = nationalities.Select(x => new SelectListItem
