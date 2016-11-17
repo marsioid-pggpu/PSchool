@@ -22,17 +22,17 @@ namespace SchoolPortal.Controllers
             { return View("Index"); }
         }
 
-        //public ActionResult AdminIndex()
-        //{
-        //    if (HttpContext.User.IsInRole("admins"))
-        //        { return View(); }
-        //}
-        
-        //public ActionResult UserIndex()
-        //{
-        //    if (HttpContext.User.Identity.IsAuthenticated)
-        //        { return View(); }
-        //}
+        [Authorize(Roles = "admins")]
+        public ActionResult AdminIndex()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult UserIndex()
+        {
+            return View();
+        }
 
         public ActionResult About()
         {

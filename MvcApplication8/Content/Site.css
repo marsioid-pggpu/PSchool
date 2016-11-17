@@ -90,6 +90,10 @@ h5, h6 {
         text-decoration: none;
     }
 
+.delete-warning {
+    color: red;
+}
+
 .home-user-menu {
     text-align:center;
 }

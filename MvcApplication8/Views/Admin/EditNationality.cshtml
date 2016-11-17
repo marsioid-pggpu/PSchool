@@ -1,0 +1,38 @@
+﻿@model SchoolDomains.Nationality
+
+@{
+    ViewBag.Title = "Редактирование национальностей";
+}
+
+<h2>Редактирование национальностей</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Национальность</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            Национальность
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name, "Введите правильную нацональность")
+        </div>
+
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Назад к списку национальностей", "ViewNationality")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,8 +1,10 @@
 ﻿@model SchoolDomains.StudyType
 
 @{
-    ViewBag.Title = "Добавление типов обучения";
+    ViewBag.Title = "Редактирование типов обучения";
 }
+
+<h2>Редактирование типов обучения</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -11,8 +13,10 @@
     <fieldset>
         <legend>Тип обучения</legend>
 
+        @Html.HiddenFor(model => model.Id)
+
         <div class="editor-label">
-            Добавление типа обучения:
+            Тип обучения
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Name)
@@ -20,7 +24,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Добавить" />
+            <input type="submit" value="Сохранить" />
         </p>
     </fieldset>
 }

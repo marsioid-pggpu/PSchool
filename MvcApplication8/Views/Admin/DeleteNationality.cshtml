@@ -1,0 +1,27 @@
+﻿@model SchoolDomains.Nationality
+
+@{
+    ViewBag.Title = "Удаление национальностей";
+}
+
+<h2>Удаление национальностей</h2>
+
+<h3 class="delete-warning">Внимание Вы также удалите все записи с которыми связан данная национальность!!!!</h3>
+<h3>Вы действительно хотите это удалить?</h3>
+<fieldset>
+    <legend>Национальность</legend>
+
+    <div class="display-label">
+         Национальность
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Назад к списку национальностей", "ViewNationality")
+    </p>
+}

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SchoolDomains.SchoolType>
+
+@{
+    ViewBag.Title = "Список типов школ";
+}
+
+<h2>Список типов школ</h2>
+
+<p>
+    @Html.ActionLink("Добавить тип школы", "AddSchoolType")
+</p>
+<table>
+    <tr>
+        <th>
+            Типы школ
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "EditSchoolType", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "DeleteSchoolType", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Назад к администрированию", "Index", "Home")
+</div>

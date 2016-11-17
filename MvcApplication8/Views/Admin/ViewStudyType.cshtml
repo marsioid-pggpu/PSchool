@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SchoolDomains.StudyType>
+
+@{
+    ViewBag.Title = "Список типов обучения";
+}
+
+<h2>Список типов обучения</h2>
+
+<p>
+    @Html.ActionLink("Добавить тип обучения", "AddStudyType")
+</p>
+<table>
+    <tr>
+        <th>
+            Тип обучения
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "EditStudyType", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "DeleteStudyType", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("Назад к администрированию", "Index", "Home")
+</div>

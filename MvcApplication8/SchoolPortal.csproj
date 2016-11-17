@@ -194,9 +194,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611160634266_1.cs" />
-    <Compile Include="Migrations\201611160634266_1.Designer.cs">
-      <DependentUpon>201611160634266_1.cs</DependentUpon>
+    <Compile Include="Migrations\201611170512566_1.cs" />
+    <Compile Include="Migrations\201611170512566_1.Designer.cs">
+      <DependentUpon>201611170512566_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
@@ -329,7 +329,7 @@
     <Content Include="Views\School\Delete.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\UserIndex.cshtml" />
-    <Content Include="Views\Home\Query.cshtml" />
+    <Content Include="Views\Report\Query.cshtml" />
     <Content Include="Views\Child\2AddChild.cshtml" />
     <Content Include="Views\Child\Search.cshtml" />
     <Content Include="Views\Report\ReportChildSchool.cshtml" />
@@ -348,6 +348,25 @@
     <Content Include="Views\Home\AdminIndex.cshtml" />
     <Content Include="Views\Admin\AddSchool.cshtml" />
     <Content Include="Views\Admin\FindSchool.cshtml" />
+    <Content Include="Views\Admin\ViewSchoolType.cshtml" />
+    <Content Include="Views\Admin\EditSchoolType.cshtml" />
+    <Content Include="Views\Admin\DeleteSchoolType.cshtml" />
+    <Content Include="Views\Admin\ViewClassType.cshtml" />
+    <Content Include="Views\Admin\EditClassType.cshtml" />
+    <Content Include="Views\Admin\DeleteClassType.cshtml" />
+    <Content Include="Views\Admin\ViewStudyForm.cshtml" />
+    <Content Include="Views\Admin\EditStudyForm.cshtml" />
+    <Content Include="Views\Admin\DeleteStudyForm.cshtml" />
+    <Content Include="Views\Admin\ViewStudyType.cshtml" />
+    <Content Include="Views\Admin\EditStudyType.cshtml" />
+    <Content Include="Views\Admin\DeleteStudyType.cshtml" />
+    <Content Include="Views\Admin\ViewNationality.cshtml" />
+    <Content Include="Views\Admin\EditNationality.cshtml" />
+    <Content Include="Views\Admin\DeleteNationality.cshtml" />
+    <Content Include="Views\Admin\ViewUser.cshtml" />
+    <Content Include="Views\Admin\ViewLocality.cshtml" />
+    <Content Include="Views\Admin\EditLocality.cshtml" />
+    <Content Include="Views\Admin\DeleteLocality.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -359,8 +378,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611160634266_1.resx">
-      <DependentUpon>201611160634266_1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611170512566_1.resx">
+      <DependentUpon>201611170512566_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

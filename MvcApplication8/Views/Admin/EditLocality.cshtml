@@ -1,0 +1,46 @@
+﻿@model SchoolDomains.Locality
+
+@{
+    ViewBag.Title = "Редактирование районов";
+}
+
+<h2>Редактирование районов</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Район</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            Район
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name, "Введите правильный район")
+        </div>
+
+        <div class="editor-label">
+            Сокращение
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ShName)
+            @Html.ValidationMessageFor(model => model.ShName, "Введите правильное сокращение района")
+        </div>
+
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Назад к списку районов", "ViewLocality")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

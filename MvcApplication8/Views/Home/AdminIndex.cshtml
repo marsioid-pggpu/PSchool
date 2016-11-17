@@ -5,7 +5,7 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
+                <h1>@ViewBag.Title</h1>
             </hgroup>
 
         </div>
@@ -13,17 +13,28 @@
 }
 
 <section class="home-admin-menu">
+    <div class="admin-roles">
+        <header>
+            <h2>Управление учетными записями</h2>
+        </header>
+            <p>
+                @Html.ActionLink("%Управление пользователями%", "ViewUser", "Admin")
+                @Html.ActionLink("%Управление администраторами%", "ViewAdmin", "Admin")
+            </p>
+    </div>
     <div class="admin-add">
         <header>
             <h2>Добавление</h2>
         </header>
             <p>
-                @Html.ActionLink("Добавить тип класса", "AddClassType", "Admin")
-                @Html.ActionLink("Добавить тип школы", "AddSchoolType", "Admin")
-                @Html.ActionLink("Добавить форму обучения", "AddStudyForm", "Admin")
-                @Html.ActionLink("Добавить тип обучения", "AddStudyType", "Admin")
-                @Html.ActionLink("Добавить национальность", "AddNationality", "Admin")
-                @Html.ActionLink("Добавить район", "AddLocality", "Admin")
+                @Html.ActionLink("Управление формой обучения", "ViewStudyForm", "Admin")
+                @Html.ActionLink("Управление типом обучения", "ViewStudyType", "Admin")
+                @Html.ActionLink("Управление типами классов", "ViewClassType", "Admin")
+                @Html.ActionLink("Управление типами школ", "ViewSchoolType", "Admin")
+                <br />
+                @Html.ActionLink("Управление национальностями", "ViewNationality", "Admin")
+                @Html.ActionLink("Управление районами", "ViewLocality", "Admin")
+                @Html.ActionLink("%Управление школами%", "ViewSchool", "Admin")
             </p>
     </div>
     <div class="admin-user">

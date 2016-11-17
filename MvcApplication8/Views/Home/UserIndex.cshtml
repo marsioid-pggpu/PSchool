@@ -5,7 +5,7 @@
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
+                <h1>@ViewBag.Title</h1>
             </hgroup>
 
         </div>
@@ -15,7 +15,7 @@
 <section class="home-user-menu">
     <div class="child">
         <header>
-            <h2>Работа с учениками</h2>
+            <h2>@Html.ActionLink("Работа с учениками", "Index", "Child")</h2>
         </header>
             <p>
                 @Html.ActionLink("Добавить ученика", "Add", "Child")
@@ -25,7 +25,7 @@
     </div>
     <div class="institutions">
         <header>
-            <h2>Работа с образовательными учереждениями</h2>
+            <h2>@Html.ActionLink("Работа с образовательными учереждениями", "Index", "School")</h2>
         </header>
             <p>
                 @Html.ActionLink("Слияние двух образовательных учереждений", "Marger", "School")
@@ -34,7 +34,7 @@
     </div>
     <div class="report">
         <header>
-            <h2>Отчеты</h2>
+            <h2>@Html.ActionLink("Отчеты", "Index", "Report")</h2>
         </header>
             <p>
                 @Html.ActionLink("Количество детей по школам", "ChildSchool", "Report")

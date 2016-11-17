@@ -11,7 +11,7 @@ namespace SchoolPortal.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201611160634266_1"; }
+            get { return "201611170512566_1"; }
         }
         
         string IMigrationMetadata.Source
